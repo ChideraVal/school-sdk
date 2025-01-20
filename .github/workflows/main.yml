@@ -18,7 +18,7 @@ jobs:
           python-version: '3.9'
 
       - name: Run Client Tests
-        run: python test_client.py
+        run: python "tests/test_client.py"
 
       - name: Run Utils Tests
-        run: python test_utils.py
+        run: python "tests/test_utils.py"
