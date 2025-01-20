@@ -1,0 +1,24 @@
+name: Python Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Run Client Tests
+        run: python test_client.py
+
+      - name: Run Utils Tests
+        run: python test_utils.py
