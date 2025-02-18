@@ -36,6 +36,6 @@ jobs:
         run: echo "BIND_KEY=${{ secrets.BIND_KEY }}" >> $GITHUB_ENV
 
       - name: Get bind key value
-        run: echo "bind key is $BIND_KEY"
+        run: echo "bind key is ${{ secrets.BIND_KEY }}"
        
         
