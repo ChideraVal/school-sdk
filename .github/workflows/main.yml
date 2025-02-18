@@ -32,7 +32,10 @@ jobs:
         with:
           python-version: '3.9'
 
+      - name: Set bind key value
+        run: echo "BIND_KEY=${{ secrets.BIND_KEY }}" >> $GITHUB_ENV
+
       - name: Get bind key value
-        run: echo "My bind key is ${{ secrets.BIND_KEY }}"
-        
+        run: echo "bind key is $BIND_KEY"
+       
         
