@@ -33,6 +33,6 @@ jobs:
           python-version: '3.9'
 
       - name: Run My Echo Job
-        run: echo "ejd!" > echo.txt
+        run: echo "echoing...!!!"
         
         
