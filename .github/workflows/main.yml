@@ -20,3 +20,19 @@ jobs:
       - name: Run Client Tests
         run: python "SchoolSDK/testcl.py"
         
+  myechoJob:
+    runs-on: ubuntu-latest
+    needs: testing
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Run My Echo Job
+        run: echo "ejd!" > echo.txt
+        
+        
